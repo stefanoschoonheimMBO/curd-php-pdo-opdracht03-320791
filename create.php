@@ -21,7 +21,8 @@ try {
  * We gaan een sql-query maken voor het wegschrijven van de formuliergegevens in de tabel Persoon
  */
 // Schrijf de sql-insertquery
-$sql = "INSERT INTO achtbaandetails (achtbaan
+$sql = "INSERT INTO achtbaandetails (Id
+                            ,achtbaan
                             ,pretpark
                             ,land
                             ,topsnelheid

@@ -110,7 +110,7 @@ var_dump($result);
         <input type="text" id="cijfer" name="cijfer" value="<?= $result->CI?>"><br>
         <br>
         <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
-        <input type="submit" value="Verstuur">
+        <input type="submit" value="Sla op">
 
     </form>    
 </body>
