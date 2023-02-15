@@ -16,7 +16,6 @@ try {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo "Er is op het formulier knopje gedrukt";
-    var_dump($_POST);
     try {
         $sql = "UPDATE achtbaandetails
                 SET achtbaan = :achtbaan,
@@ -68,9 +67,6 @@ $statement->execute();
 
 $result = $statement->fetch(PDO::FETCH_OBJ);
 
-var_dump($result);
-
-
 ?>
 
 
@@ -103,15 +99,18 @@ var_dump($result);
         <label for="hoogte">Hoogte:</label><br>
         <input type="text" id="hoogte" name="hoogte" value="<?= $result->HO?>"><br>
         <br>
-        <label for="datum">Huisnummer</label><br>
+        <label for="datum">Datum:</label><br>
         <input type="date" id="datum" name="datum" value="<?= $result->DA?>"><br>
         <br>
-        <label for="cijfer">Woonplaats</label><br>
-        <input type="text" id="cijfer" name="cijfer" value="<?= $result->CI?>"><br>
+        <label for="cijfer">Cijfer:</label><br>
+        <input type="range" id="cijfer" name="cijfer" min="1" max="10" step=".1" oninput="getal(this.value)" value="<?= $result->CI?>"><br>
+        <p id="output">5.5</p>
         <br>
         <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
         <input type="submit" value="Sla op">
 
-    </form>    
+    </form>   
+
+    <script src="script.js"></script> 
 </body>
 </html>

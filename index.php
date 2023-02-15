@@ -31,12 +31,14 @@
         <input type="date" id="datum" name="datum"><br>
         <br>
         <label for="cijfer">Cijfer voor achtbaan:</label><br>
-        <input type="range" id="cijfer" name="cijfer" min="0" max="10"><br>
+        <input type="range" id="cijfer" name="cijfer" min="1" max="10" step=".1" oninput="getal(this.value)"><br>
+        <p id="output">5.5</p>
         <br>
         <input type="submit" value="Sla op">
 
     </form>
     
+    <script src="script.js"></script>
 </body>
 </html>
 
