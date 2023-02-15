@@ -67,8 +67,8 @@
     }
 ?>
 
-<h3>Persoonsgegevens</h3>
-<a href="index.php"><input type="button" value="Nieuw persoon"></a>
+<h3>tabel achtbanen</h3>
+<a href="index.php"><input type="button" value="Add nieuw record"></a>
 <br><br>
 <table border="1">
     <thead>

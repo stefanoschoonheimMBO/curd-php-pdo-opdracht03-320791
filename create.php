@@ -45,12 +45,10 @@ $statement = $pdo->prepare($sql);
 $statement->bindValue(':achtbaan', $_POST['achtbaan'], PDO::PARAM_STR);
 $statement->bindValue(':pretpark', $_POST['pretpark'], PDO::PARAM_STR);
 $statement->bindValue(':land', $_POST['land'], PDO::PARAM_STR);
-$statement->bindValue(':topsnelheid', $_POST['topsnelheid'], PDO::PARAM_STR);
-$statement->bindValue(':hoogte', $_POST['hoogte'], PDO::PARAM_STR);
+$statement->bindValue(':topsnelheid', $_POST['topsnelheid'], PDO::PARAM_INT);
+$statement->bindValue(':hoogte', $_POST['hoogte'], PDO::PARAM_INT);
 $statement->bindValue(':datum', $_POST['datum'], PDO::PARAM_STR);
 $statement->bindValue(':cijfer', $_POST['cijfer'], PDO::PARAM_STR);
-$statement->bindValue(':zip', $_POST['zip'], PDO::PARAM_STR);
-$statement->bindValue(':country', $_POST['country'], PDO::PARAM_STR);
 
 // Voer de sql-query uit op de database
 $statement->execute();
